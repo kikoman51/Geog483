@@ -23,11 +23,15 @@
 
 <div id="mapid"</div>
 <script src="https://embed.github.com/view/geojson/kikoman51/geog483/master/coffeeshop.geojson" type="text/javascript"></script>
-<script type='text/javascript'>
-	function onEachFeature(feature, layer) {
+function onEachFeature(feature, layer) {
     if (feature.properties) {
         layer.bindPopup("<b>" + feature.properties.Point + "</b> is located at " + feature.geometry.coordinates + "  lat/long.");
-    }}
+    }
+	}
+	var points = new L.geoJson(points, {
+		onEachFeature: onEachFeature
+	}).addTo(mymap);
 </script>
+	
 </body>
 </html>

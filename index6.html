@@ -23,16 +23,6 @@
 
 <div id="mapid"</div>
 <script src="https://embed.github.com/view/geojson/kikoman51/geog483/master/coffeeshop.geojson" type="text/javascript"></script>
-<script type='text/javascript'>
-	var mymap = L.map('mapid').setView([43.4701, -80.5451], 15);
-	L.tileLayer("http://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
-	}).addTo(mymap);
-	function onEachFeature(feature, layer) {
-    if (feature.properties) {
-        layer.bindPopup("<b>" + feature.properties.Point + "</b> is located at " + feature.geometry.coordinates + "  lat/long.");
-    }
-	}
-</script>
+
 </body>
 </html>

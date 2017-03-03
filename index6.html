@@ -33,6 +33,8 @@ function onEachFeature(feature, layer) {
 	var points = new L.geoJson(points, {
 		onEachFeature: onEachFeature
 	}).addTo(mymap);
+	L.marker([43.476, -80.532]).addTo(mymap)
+		.bindPopup("<b>Hello world!</b><br />I am popup1.").openPopup();
 </script>
 	
 </body>
